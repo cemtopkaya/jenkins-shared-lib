@@ -9,8 +9,8 @@ class SCM {
 
     def steps
 
-    SCM(steps) {
-        this.steps = steps
+    SCM() {
+        // this.steps = steps
     }
     
     def yaz(String gelen = "varsayılan") {
