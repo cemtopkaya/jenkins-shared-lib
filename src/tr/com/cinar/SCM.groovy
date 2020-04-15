@@ -12,8 +12,8 @@ class SCM {
     SCM() {
         // this.steps = steps
     }
-    
-    def yaz(String gelen = "varsayılan") {
+
+    def void yaz(String gelen = "varsayılan") {
         echo "Gelen metin nedir? : ${gelen}"
     }
 

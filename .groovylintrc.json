@@ -10,6 +10,9 @@
         "LineLength": {
             "enabled": false
         },
+        "NoDef": {
+            "enabled": false
+        },
         "PropertyName": {
             "enabled": false
         }
