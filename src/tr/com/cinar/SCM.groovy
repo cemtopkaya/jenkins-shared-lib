@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 // com/cleverbuilder/GlobalVars.groovy
-package com.cinar
+package tr.com.cinar
 
-class SCM { 
+class SCM implements Serializable {
 
     String URL = "ssh"
     String CredId = "...."
