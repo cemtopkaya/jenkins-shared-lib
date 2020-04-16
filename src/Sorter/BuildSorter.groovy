@@ -33,6 +33,7 @@ class BuildSorter {
         return sorted
     }
 
+    @NonCPS
     def static ArrayList getDependencies(Map<String, Paket> p1){
         def libModuleNames = p1.keySet();
         def depNames = []
