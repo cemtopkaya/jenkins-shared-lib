@@ -8,6 +8,7 @@ import java.util.regex.Pattern
 
 class PackageParser {
 
+    @NonCPS
     def static ArrayList parseJson(String jsonPath){
         def res = []
         
