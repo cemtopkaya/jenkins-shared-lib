@@ -27,7 +27,7 @@ class BuildSorter {
                 return 1;
             }
 
-        def sorted = libs.sort{ fnSort }
+        def sorted = libs.sort{ a,b->fnSort(a,b) }
 
         return sorted
     }
