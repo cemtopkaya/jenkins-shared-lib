@@ -1,4 +1,4 @@
-//package tr.com.cinar.Model
+package Model
 
 class Paket{
     String name;
