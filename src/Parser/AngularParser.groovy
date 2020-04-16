@@ -8,7 +8,7 @@ import java.util.regex.Pattern
 
 class AngularParser {
 
-    def static Map<String, Paket> parseJson(String jsonPath="C:/Users/cem.topkaya/git/gui_nrf_test/angular.json"){
+    def static Map<String, Paket> parseJson(String jsonPath){
         def res = [:]
         
         def lines = new File(jsonPath).readLines()
