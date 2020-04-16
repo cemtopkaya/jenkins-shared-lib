@@ -12,7 +12,7 @@ class BuildSorter {
         def libs = param.keySet();
         def deps = getDependencies(param)
 
-        def sorted = libs.sort{ a, b -> {
+        def fnSort = { String a, String b ->    
                 //println "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
                 //println "a: $a -- b: $b"
                 //println "   a.dependencies: ${param.get(a).dependencies}"
@@ -26,7 +26,8 @@ class BuildSorter {
                 // bağımlılıklarda yoksa en son derlensin
                 return 1;
             }
-        }
+
+        def sorted = libs.sort{ fnSort }
 
         return sorted
     }
