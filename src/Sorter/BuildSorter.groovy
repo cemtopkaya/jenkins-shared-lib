@@ -8,6 +8,7 @@ import java.util.regex.Pattern
 
 class BuildSorter {
 
+    @NonCPS
     def static getSortedLibraries(Map<String, Paket> param){
         def libs = param.keySet();
         def deps = getDependencies(param)
