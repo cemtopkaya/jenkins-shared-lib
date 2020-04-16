@@ -8,10 +8,10 @@ import java.util.regex.Pattern
 
 class AngularParser {
 
-    def static Map<String, Paket> parseJson(String jsonPath){
+    def static Map<String, Paket> parseAngularJson(String projectDir){
         def res = [:]
         
-        def lines = new File(jsonPath).readLines()
+        def lines = new File(projectDir+"/angular.json").readLines()
 
         lines.eachWithIndex((line, idx)->{
             def reg =  ~/.*"projectType": "library",/
@@ -26,9 +26,9 @@ class AngularParser {
                 def name = matcher[0][0]
 
                 
-                println "Name: ${name} , Path: ${root}"
-                def dir = "C:/Users/cem.topkaya/git/gui_nrf_test/${root}/package.json"
-                println dir
+                // println "Name: ${name} , Path: ${root}"
+                def dir = "${projectDir}/${root}/package.json"
+                // println dir
                 res.put(name, new Paket(name, root, PackageParser.parseJson(dir)))
             }
         })
