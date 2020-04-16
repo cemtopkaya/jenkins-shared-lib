@@ -13,7 +13,7 @@ class AngularParser {
         
         def lines = new File(projectDir+"/angular.json").readLines()
 
-        lines.eachWithIndex((line, idx)->{
+        lines.eachWithIndex{line, idx ->
             def reg =  ~/.*"projectType": "library",/
             if(reg.matcher(line).matches()){
                 // println "${idx} \t Current Line: ${line} \t Prev Line: ${lines[idx-1]} \t Next Line: ${lines[idx+1]}"
@@ -31,7 +31,7 @@ class AngularParser {
                 // println dir
                 res.put(name, new Paket(name, root, PackageParser.parseJson(dir)))
             }
-        })
+        }
 
         return res
     }
