@@ -40,12 +40,10 @@ class BuildSorter {
             // println "$index Key: $entry.key \n\t Value: $entry.value \n\t Path: $entry.value.path \n\t Dependencies: $entry.value.dependencies"
 
             entry.value.dependencies.each{
-                d-> {
-                    // println "\n\t Dep Name: ${d} \n\t $depNames \n\t depNames.contains(d): ${depNames.contains(d)} \n***************"
+                d-> // println "\n\t Dep Name: ${d} \n\t $depNames \n\t depNames.contains(d): ${depNames.contains(d)} \n***************"
                     if(!depNames.contains(d)) {
                         depNames.add(d)
                     }
-                }
             }
         }
 
