@@ -13,13 +13,13 @@ class PackageParser {
         
         def lines = new File(jsonPath).readLines()
 
-        lines.eachWithIndex((line, idx)->{
+        lines.eachWithIndex { line, idx ->
             def matcher = line =~ /@cinar.*(?=":)/
             if(matcher.size()>0){
                 def dependency = matcher[0]
                 res.add(dependency)
             }
-        })
+        }
 
         return res.size()>0 ? res : null;
     }
