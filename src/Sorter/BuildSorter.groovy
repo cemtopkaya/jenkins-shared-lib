@@ -12,8 +12,7 @@ class BuildSorter {
         def libs = param.keySet();
         def deps = getDependencies(param)
 
-        def sorted = libs.sort{ a, b -> 
-            {
+        def sorted = libs.sort{ a, b -> {
                 //println "\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
                 //println "a: $a -- b: $b"
                 //println "   a.dependencies: ${param.get(a).dependencies}"
