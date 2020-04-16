@@ -5,7 +5,6 @@ import java.io.*;
 import groovy.io.*;
 import java.util.regex.Pattern
 
-
 class BuildSorter {
 
     @NonCPS

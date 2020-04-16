@@ -2,12 +2,11 @@ import Parser.AngularParser;
 import Sorter.BuildSorter; 
 
 @NonCPS
-def call() {
+def call(String projectPath) {
     // Any valid steps can be called from this code, just like in other
     // Scripted Pipeline
-    println "Merhaba, Cengoooo."
+    println "Merhaba, Cengoooo::: $projectPath"
     
-    def projectPath = "C:/Users/cem.topkaya/git/gui_nrf_test/"
     def map = AngularParser.parseAngularJson(projectPath)
     //println map
     res = BuildSorter.getSortedLibraries(map)
