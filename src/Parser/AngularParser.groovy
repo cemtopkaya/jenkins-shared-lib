@@ -8,6 +8,7 @@ import java.util.regex.Pattern
 
 class AngularParser {
 
+    @NonCPS
     def static Map<String, Paket> parseAngularJson(String projectDir){
         def res = [:]
         

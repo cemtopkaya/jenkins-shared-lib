@@ -10,6 +10,6 @@ def call() {
     def map = AngularParser.parseAngularJson(projectPath)
     //println map
     res = BuildSorter.getSortedLibraries(map)
-    echo res
+    //echo res
 
 }
