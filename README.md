@@ -16,3 +16,5 @@ veya xxx.gvy dosyasını işaret etmek içindir.
 en başta "groovy" executable dosyanın da ortam değişkenlerinden erişilebilir olmasına dikkat etmek gerek.
 
 [Referans](https://gist.github.com/tknerr/42258e761f2a0f95a92b)
+
+build.gradle dosyasında classpath
