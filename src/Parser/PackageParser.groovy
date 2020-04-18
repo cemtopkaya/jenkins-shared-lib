@@ -5,6 +5,7 @@ import java.io.*;
 import groovy.io.*;
 import java.util.regex.Pattern
 
+import com.cloudbees.groovy.cps.NonCPS
 
 class PackageParser {
 
